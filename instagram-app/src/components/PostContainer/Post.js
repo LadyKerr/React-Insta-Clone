@@ -17,19 +17,12 @@ const Post = props => {
      image={props.postData.imageUrl}
      likes={props.postData.likes}
      />
-     {props.postData.comments.map(comment => (
       <CommentSection 
-      comments={comment}
-      key={comment.id}
+      comments={props.postData.comments}
       />
-     ))}
      <span id="timestamp">
       {props.postData.timestamp}
      </span>
-     <input 
-     placeholder="Add a comment..."
-     className="post-input"
-     />
     </div>
   )
 }
