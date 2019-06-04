@@ -14,7 +14,7 @@ const Comment = props => {
 }
 
 Comment.propTypes = {
-  comments: PropTypes.shape({
+    comments: PropTypes.shape({
     username: PropTypes.string.isRequired,
     text: PropTypes.string.isRequired
   })

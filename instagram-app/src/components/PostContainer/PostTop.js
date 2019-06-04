@@ -4,12 +4,12 @@ const PostTop = props => {
   return (
     <div className="post-top">
       <img 
-      className="thumb-img"
-      alt="user"
-      src={props.thumbnail}
+        className="thumb-img"
+        alt="user"
+        src={props.thumbnail}
       />
       <div className="username">
-      {props.username}
+        {props.username}
       </div>
     </div>
   )

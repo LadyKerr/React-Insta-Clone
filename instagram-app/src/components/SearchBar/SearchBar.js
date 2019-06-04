@@ -9,15 +9,15 @@ const SearchBar = () => {
       
       <div className="logo">
       <img 
-      id="fab-logo"
-      src= {logo}
-      alt="insta-logo"
+        id="fab-logo"
+        src= {logo}
+        alt="insta-logo"
       />
       </div>
 
       <input 
-      type="text"
-      placeholder="Search"
+        type="text"
+        placeholder="Search"
       />
 
       <div className="icons">

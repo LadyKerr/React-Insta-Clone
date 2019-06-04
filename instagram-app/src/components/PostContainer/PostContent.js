@@ -15,14 +15,13 @@ class PostContent extends React.Component {
     return (
       <div>
         <img
-        className="post-img" 
-        alt="post"
-        src={this.props.image}
+          className="post-img" 
+          alt="post"
+          src={this.props.image}
         />
         <div id="post-icons">
           <i className="far fa-comment"></i>
           {this.state.liked ? <p onClick={this.toggleLike}>liked</p> : <i onClick={this.toggleLike} className="far fa-heart"></i>}
-        
         </div>
       <div className="post-likes">
         {this.props.likes} likes

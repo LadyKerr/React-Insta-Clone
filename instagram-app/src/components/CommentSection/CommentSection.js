@@ -44,8 +44,8 @@ class CommentSection extends React.Component {
       <div>
         {this.state.comments.map(comment => (
           <Comment 
-          comments={comment}
-          key={comment.id}
+            comments={comment}
+            key={comment.id}
           />
         ))}
         <form onSubmit={this.addNewComment}>

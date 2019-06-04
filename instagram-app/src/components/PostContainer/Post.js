@@ -10,15 +10,15 @@ const Post = props => {
   return (
     <div className="post-border">
       <PostTop 
-      username={props.postData.username}
-      thumbnail={props.postData.thumbnailUrl}
+        username={props.postData.username}
+        thumbnail={props.postData.thumbnailUrl}
       />
      <PostContent 
-     image={props.postData.imageUrl}
-     likes={props.postData.likes}
+        image={props.postData.imageUrl}
+        likes={props.postData.likes}
      />
       <CommentSection 
-      comments={props.postData.comments}
+        comments={props.postData.comments}
       />
     </div>
   )
