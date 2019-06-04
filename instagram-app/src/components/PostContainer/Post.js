@@ -20,9 +20,6 @@ const Post = props => {
       <CommentSection 
       comments={props.postData.comments}
       />
-     <span id="timestamp">
-      {props.postData.timestamp}
-     </span>
     </div>
   )
 }
