@@ -6,13 +6,16 @@ import PostContainer from "./components/PostContainer/PostContainer";
 import './App.css';
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      postData: dummyData
-    };
-  }
+  state = {
+    postData: []
+  };
 
+  componentDidMount() {
+    this.setState({
+      postData: dummyData
+    });
+  }
+    
   render () {
     return (
       <div className="App">
