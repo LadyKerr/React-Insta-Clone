@@ -5,39 +5,44 @@ import Comment from "./Comment";
 import "./CommentSection.css";
 
 class CommentSection extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      comments: props.comments,
-      id: '',
-      username: 'LadyKerr',
-      text: ''
-    }
-  }
 
-  addNewComment = (event) => {
-    event.preventDefault();
-    const newComment = {
-      id: this.state.comments.id,
-      text: this.state.comments.text,
-      username: this.state.comments.username
-    }
+  state = {
+    comments: [],
+    comment: '',
+    username: ''
+  }
+  
+  componentDidMount() {
     this.setState({
-    comments: [...this.state.comments, newComment]
+      comments: this.props.comments,
+      comment: '',
+      username: 'LadyKerr'
     })
   }
 
-  commentChange = event => {
+  addNewComment = (event , index)=> {
     event.preventDefault();
+    let newComment = {
+      id: this.state.comments.length + 1,
+      username: this.state.username,
+      text: this.state.comment
+    }
     this.setState({
-      [event.target.name]: event.target.value
-    });
+          ...this.state,
+        comments: [...this.state.comments, newComment]
+    })
   }
+
+  handleChanges = (e) => {
+    this.setState({
+        [e.target.name]: e.target.value
+    })
+}
 
   render() {
       return (
       <div>
-        {this.props.comments.map(comment => (
+        {this.state.comments.map(comment => (
           <Comment 
           comments={comment}
           key={comment.id}
@@ -46,9 +51,9 @@ class CommentSection extends React.Component {
         <form onSubmit={this.addNewComment}>
           <input
             type="text"
-            name="text"
-            onChange={this.commentChange}
-            value={this.state.text}
+            name="comment"
+            onChange={this.handleChanges}
+            value={this.state.comment}
             placeholder="Add a comment..."
             className="post-input"
           />
