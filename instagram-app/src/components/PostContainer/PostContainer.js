@@ -3,7 +3,6 @@ import Post from "./Post";
 
 import PropTypes from "prop-types";
 
-import "./PostContainer.css";
 
 const PostContainer = props => {
     return (
