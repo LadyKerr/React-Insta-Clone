@@ -1,9 +1,14 @@
 import React from "react";
 
-const withAuthenticate = PostComp => 
+const withAuthenticate = PostComp => LoginComp =>
   class extends React.Component {
     render() {
-      return <PostComp />;
+      return (
+        <React.Fragment>
+          <LoginComp />
+          <PostComp />
+        </React.Fragment>
+      );
     }
   }
 

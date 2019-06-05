@@ -1,14 +1,25 @@
 import React from 'react';
 import PostPage from "./components/PostContainer/PostPage";
+import LoginPage from "./components/login/LoginPage";
 import withAuthenticate from "./components/authentication/withAuthenticate";
 import './App.css';
 
-const ComponentFromWithAuthenticate = withAuthenticate (PostPage);
+const ComponentFromWithAuthenticate = withAuthenticate (PostPage)(LoginPage);
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
+  state = {
+    loggedIn: true
+  }
+
+  componentDidMount() {
+    if(localStorage.getItem('loggedIn')) {
+      localStorage.removeItem('loggedIn');
+      this.setState({
+        loggedIn: true
+      });
+    } else {
+      
+    }
   }
 
   render () {
