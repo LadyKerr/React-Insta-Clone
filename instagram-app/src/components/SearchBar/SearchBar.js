@@ -8,7 +8,7 @@ const SearchBar = (props) => {
     <div className="search-bar-container">
       
       <div className="logo-cam">
-      <i id="camera" class="fab fa-instagram"></i>
+      <i id="camera" className="fab fa-instagram"></i>
       <img 
         id="fab-logo"
         src= {instalogo}
@@ -18,8 +18,10 @@ const SearchBar = (props) => {
 
       <input 
         type="text"
-        placeholder="Search"
-        onChange={props.search}
+        value={props.search}
+        name="searchPost"
+        placeholder="search"
+        onChange={props.searchFilter}
         className="search-bar"
       />
 

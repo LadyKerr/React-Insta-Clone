@@ -8,7 +8,8 @@ import './App.css';
 class App extends React.Component {
   state = {
     postData: [],
-    searchPost: []
+    searchPost: "",
+    filteredPost: []
   };
 
   componentDidMount() {
@@ -18,16 +19,16 @@ class App extends React.Component {
   }
   
   search = event => {
-  let searchFilter = this.state.postData.filter(post => {
-    if(post.username.includes(event.target.value)) {
-          return post;
-      } else {
-          return undefined;
-      }
-    })
     this.setState({
-      searchPost: searchFilter
+      [event.target.name]: event.target.value
     })
+  }
+
+  searchFilter = event => {
+    const newFilter = this.state.postData.filter(post => {
+      post.username.toLowerCase().includes(event.target.value.toLowerCase())
+    })
+    this.setState({filteredPost: newFilter})
   }
 
   render () {
@@ -35,9 +36,12 @@ class App extends React.Component {
       <div className="App">
         <SearchBar 
           search={this.search}
+          searchFilter={this.searchFilter}
         />
         <PostContainer 
         postData = {this.state.postData}
+        filteredPost = {this.state.filteredPost}
+        searchFilter={this.searchFilter}
         />
       </div>
     );

@@ -20,7 +20,7 @@ class CommentSection extends React.Component {
     })
   }
 
-  addNewComment = (event , index)=> {
+  addNewComment = (event)=> {
     event.preventDefault();
     let newComment = {
       id: this.state.comments.length + 1,
@@ -29,7 +29,8 @@ class CommentSection extends React.Component {
     }
     this.setState({
           ...this.state,
-        comments: [...this.state.comments, newComment]
+        comments: [...this.state.comments, newComment],
+        comment: ''
     })
   }
 
