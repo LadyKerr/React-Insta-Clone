@@ -3,19 +3,15 @@ import React from "react"
 class PostContent extends React.Component {
   state = {
     liked: false,
-    likes: 0
+    likes: this.props.likes
   }
 
   toggleLike = () => {
-    this.setState({
-      liked: !this.state.liked
-    })
-  }
-
-  likesIncrease = event => {
-    event.preventDefault();
     const addOne = this.state.likes + 1;
-    this.setState({likes: addOne})
+    this.setState({
+      liked: !this.state.liked,
+      likes: addOne
+    })
   }
 
   render() {
@@ -34,7 +30,7 @@ class PostContent extends React.Component {
           </i>}
         </div>
       <div className="post-likes">
-        {this.props.likes} likes
+        {this.state.likes} likes
       </div>
     </div>
    )
