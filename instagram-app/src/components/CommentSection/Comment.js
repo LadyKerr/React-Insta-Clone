@@ -6,9 +6,10 @@ import "./CommentSection.css";
 const Comment = props => {
   return (
     <div className="comment-container">
-      {props.comments.id}
-      {props.comments.text}
-      {props.comments.username}
+      <p>
+        <strong className="comment-username">{props.comments.username}</strong>
+        {props.comments.text}
+        </p>
     </div>
   )
 }

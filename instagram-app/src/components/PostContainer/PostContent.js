@@ -21,7 +21,10 @@ class PostContent extends React.Component {
         />
         <div id="post-icons">
           <i className="far fa-comment"></i>
-          {this.state.liked ? <p onClick={this.toggleLike}>liked</p> : <i onClick={this.toggleLike} className="far fa-heart"></i>}
+          {this.state.liked ? 
+          <i onClick={this.toggleLike} className="fas fa-heart">
+          </i> : <i onClick={this.toggleLike} className="far fa-heart">
+          </i>}
         </div>
       <div className="post-likes">
         {this.props.likes} likes

@@ -3,7 +3,7 @@ import "./SearchBar.css";
 
 import logo from "./logo.png";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
   return (
     <div className="search-bar-container">
       
@@ -18,6 +18,7 @@ const SearchBar = () => {
       <input 
         type="text"
         placeholder="Search"
+        onChange={props.search}
       />
 
       <div className="icons">
