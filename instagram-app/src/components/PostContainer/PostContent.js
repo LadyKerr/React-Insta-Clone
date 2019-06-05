@@ -2,13 +2,20 @@ import React from "react"
 
 class PostContent extends React.Component {
   state = {
-    liked: false
+    liked: false,
+    likes: 0
   }
 
   toggleLike = () => {
     this.setState({
       liked: !this.state.liked
     })
+  }
+
+  likesIncrease = event => {
+    event.preventDefault();
+    const addOne = this.state.likes + 1;
+    this.setState({likes: addOne})
   }
 
   render() {

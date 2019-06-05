@@ -57,7 +57,6 @@ class CommentSection extends React.Component {
             placeholder="Add a comment..."
             className="post-input"
           />
-          <button type="submit">Add Comment</button>
         </form>
       </div>
     )
