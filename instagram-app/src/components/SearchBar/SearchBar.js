@@ -1,6 +1,5 @@
 import React from "react";
 import "./SearchBar.css";
-
 import instalogo from "./instalogo.png";
 
 const SearchBar = (props) => {
@@ -8,19 +7,17 @@ const SearchBar = (props) => {
     <div className="search-bar-container">
       
       <div className="logo-cam">
-      <i id="camera" className="fab fa-instagram"></i>
-      <img 
-        id="fab-logo"
-        src= {instalogo}
-        alt="insta-logo"
-      />
+        <i id="camera" className="fab fa-instagram"></i>
+        <img 
+          id="fab-logo"
+          src= {instalogo}
+          alt="insta-logo"
+        />
       </div>
 
       <input 
         type="text"
-        value="search"
-        name="search"
-        placeholder="search"
+        placeholder="Search"
         onChange={props.onChange}
         className="search-bar"
       />
