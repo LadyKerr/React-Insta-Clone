@@ -12,16 +12,10 @@ class LoginPage extends React.Component {
     })
 }
 
-  login = e => {
-    const username= this.state.username;
-    localStorage.setItem('username', username);
-    window.location.reload();
-  }
-
   render () {
       return(
         <React.Fragment>
-        <form onSubmit={this.login}>
+        <form onSubmit={this.props.signIn}>
           <input
             className="username" 
             name="username"
