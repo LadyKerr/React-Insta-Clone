@@ -6,12 +6,11 @@ import PropTypes from "prop-types";
 import "./PostContainer.css";
 
 const PostContainer = props => {
-  // {props.filteredPost.length === 0 ? props.postData.map( post => {
-  //   <Post 
-  //     postData={post}
-  //     key={post.id}
-  //   />
-  // })}
+  // const {search} = props.search;
+  // if (search !== "" && props.postData.username.toLowerCase().indexOf(search.toLowerCase()) === -1) {
+  //   return null
+  // }
+
     return (
       <div className="post-container">
         {props.postData.map(post => (

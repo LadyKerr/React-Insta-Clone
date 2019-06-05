@@ -8,8 +8,7 @@ import './App.css';
 class App extends React.Component {
   state = {
     postData: [],
-    searchPost: "",
-    filteredPost: []
+    search: ""
   };
 
   componentDidMount() {
@@ -18,30 +17,31 @@ class App extends React.Component {
     });
   }
   
-  search = event => {
+  onChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
     })
   }
 
-  searchFilter = event => {
-    const newFilter = this.state.postData.filter(post => {
-      post.username.toLowerCase().includes(event.target.value.toLowerCase())
-    })
-    this.setState({filteredPost: newFilter})
-  }
+  // searchFilter = event => {
+  //   const newFilter = this.state.postData.filter(post => {
+  //     post.username.toLowerCase().includes(event.target.value.toLowerCase())
+  //   })
+  //   this.setState({filteredPost: newFilter})
+  // }
 
   render () {
     return (
       <div className="App">
         <SearchBar 
-          search={this.search}
-          searchFilter={this.searchFilter}
+          onChange={this.onChange}
+          // searchFilter={this.searchFilter}
         />
         <PostContainer 
         postData = {this.state.postData}
-        filteredPost = {this.state.filteredPost}
-        searchFilter={this.searchFilter}
+        search = {this.state.search}
+        // filteredPost = {this.state.filteredPost}
+        // searchFilter={this.searchFilter}
         />
       </div>
     );

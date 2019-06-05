@@ -18,10 +18,10 @@ const SearchBar = (props) => {
 
       <input 
         type="text"
-        value={props.search}
-        name="searchPost"
+        value="search"
+        name="search"
         placeholder="search"
-        onChange={props.searchFilter}
+        onChange={props.onChange}
         className="search-bar"
       />
 
