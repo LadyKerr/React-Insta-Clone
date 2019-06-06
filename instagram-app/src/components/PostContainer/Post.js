@@ -1,14 +1,18 @@
 import React from "react";
-
-import "./PostContainer.css";
-
 import PostTop from "./PostTop";
 import PostContent from "./PostContent";
 import CommentSection from "../CommentSection/CommentSection";
+import styled from "styled-components";
+import "./PostContainer.css";
+
+const PostBorder = styled.div `
+  border: 1px solid gray;
+  margin: 20px 0;
+`;
 
 const Post = props => {
   return (
-    <div className="post-border">
+    <PostBorder>
       <PostTop 
         username={props.postData.username}
         thumbnail={props.postData.thumbnailUrl}
@@ -20,7 +24,7 @@ const Post = props => {
       <CommentSection 
         comments={props.postData.comments}
       />
-    </div>
+    </PostBorder>
   )
 }
 

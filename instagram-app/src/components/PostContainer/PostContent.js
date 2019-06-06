@@ -1,4 +1,16 @@
-import React from "react"
+import React from "react";
+import styled from "styled-components";
+
+const PostImg = styled.img `
+  height: 100%;
+  width: 100%;
+`;
+
+const PostLikes = styled.div `
+  font-weight: 500;
+  text-align: left;
+  margin: 10px;
+`;
 
 class PostContent extends React.Component {
   state = {
@@ -17,8 +29,7 @@ class PostContent extends React.Component {
   render() {
     return (
       <div>
-        <img
-          className="post-img" 
+        <PostImg
           alt="post"
           src={this.props.image}
         />
@@ -29,9 +40,9 @@ class PostContent extends React.Component {
           : <i onClick={this.toggleLike} className="far fa-heart">
           </i>}
         </div>
-      <div className="post-likes">
+      <PostLikes>
         {this.state.likes} likes
-      </div>
+      </PostLikes>
     </div>
    )
   }

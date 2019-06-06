@@ -1,19 +1,24 @@
 import React from "react";
 import Post from "./Post";
-
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
+const PostWrapper = styled.div `
+  height: 500px;
+  width: 50%;
+  margin: 10px auto;
+`;
 
 const PostContainer = props => {
     return (
-      <div className="post-container">
+      <PostWrapper>
         {props.postData.map(post => (
         <Post 
           postData={post}
           key={post.id}
         />
         ))}
-      </div>
+      </PostWrapper>
     )
 }
 

@@ -27,7 +27,7 @@ class PostPage extends React.Component {
 
   render () {
     return (
-      <div className="App">
+      <div>
         <SearchBar 
           onChange={this.onChange}
         />
