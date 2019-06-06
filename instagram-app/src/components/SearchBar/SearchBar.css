@@ -1,4 +1,4 @@
-.search-bar-container {
+/* .search-bar-container {
 border-bottom: px solid gray;
 height: 50px;
 line-height: 70px;
@@ -9,7 +9,7 @@ padding: 20px;
 
 .logo-cam {
   height: 50px;
-}
+} */
 
 #camera {
   font-size: 50px;
@@ -18,16 +18,16 @@ padding: 20px;
   padding-right: 10px;
 }
 
-#fab-logo {
+/* #fab-logo {
   height: 85%;
-}
+} */
 
-.search-bar {
+/* .search-bar {
   margin-right: 60px;
   width: 250px;
   height: 30px;
   text-align: center;
-}
+} */
 
 .icons {
   display: flex;

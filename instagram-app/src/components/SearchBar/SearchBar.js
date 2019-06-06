@@ -1,25 +1,50 @@
 import React from "react";
-import "./SearchBar.css";
 import instalogo from "./instalogo.png";
+import styled, { css } from "styled-components";
+import "./SearchBar.css";
+
+const SearchBarHeader = styled.header `
+  border-bottom: px solid gray;
+  height: 50px;
+  line-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+`;
+
+const LogoHeader = styled.header `
+  height: 50px;
+`;
+
+const LogoImage = styled.img `
+   height: 85%;
+`;
+
+const SearchInput = styled.input `
+  margin-right: 60px;
+  width: 250px;
+  height: 30px;
+  text-align: center;
+`;
+
 
 const SearchBar = (props) => {
   return (
-    <div className="search-bar-container">
+    <SearchBarHeader>
       
-      <div className="logo-cam">
+      <LogoHeader>
         <i id="camera" className="fab fa-instagram"></i>
-        <img 
+        <LogoImage 
           id="fab-logo"
           src= {instalogo}
           alt="insta-logo"
         />
-      </div>
+      </LogoHeader>
 
-      <input 
+      <SearchInput 
         type="text"
         placeholder="Search"
         onChange={props.onChange}
-        className="search-bar"
       />
 
       <div className="icons">
@@ -27,7 +52,7 @@ const SearchBar = (props) => {
         <i className="far fa-heart"></i>
         <i className="far fa-user"></i>
       </div>
-    </div>
+    </SearchBarHeader>
   )
 }
 
