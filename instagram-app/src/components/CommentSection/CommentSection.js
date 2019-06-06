@@ -1,7 +1,7 @@
 import React from "react";
 import Comment from "./Comment";
 import styled from "styled-components";
-import "./CommentSection.css";
+
 
 const PostInput = styled.input `
   height: 40px;
