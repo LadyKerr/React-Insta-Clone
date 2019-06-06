@@ -1,33 +1,9 @@
-/* .search-bar-container {
-border-bottom: px solid gray;
-height: 50px;
-line-height: 70px;
-display: flex;
-justify-content: space-between;
-padding: 20px;
-}
-
-.logo-cam {
-  height: 50px;
-} */
-
 #camera {
   font-size: 50px;
   border-right: 1px solid black;
   margin-right: 10px;
   padding-right: 10px;
 }
-
-/* #fab-logo {
-  height: 85%;
-} */
-
-/* .search-bar {
-  margin-right: 60px;
-  width: 250px;
-  height: 30px;
-  text-align: center;
-} */
 
 .icons {
   display: flex;

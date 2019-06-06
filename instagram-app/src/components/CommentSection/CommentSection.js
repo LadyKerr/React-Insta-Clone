@@ -1,8 +1,11 @@
 import React from "react";
-
 import Comment from "./Comment";
-
+import styled from "styled-components";
 import "./CommentSection.css";
+
+const PostInput = styled.input `
+  height: 40px;
+`;
 
 class CommentSection extends React.Component {
 
@@ -50,7 +53,7 @@ class CommentSection extends React.Component {
           />
         ))}
         <form onSubmit={this.addNewComment}>
-          <input
+          <PostInput
             type="text"
             name="comment"
             onChange={this.handleChanges}
