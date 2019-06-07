@@ -1,0 +1,9 @@
+#post-icons {
+  display: flex;
+  text-align: left;
+  margin-left: 0;
+}
+
+.post-input {
+  width: 99%;
+}

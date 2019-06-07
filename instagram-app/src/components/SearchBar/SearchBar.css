@@ -1,0 +1,17 @@
+#camera {
+  font-size: 50px;
+  border-right: 1px solid black;
+  margin-right: 10px;
+  padding-right: 10px;
+}
+
+.icons {
+  display: flex;
+  font-size: 20px;
+}
+
+.far {
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+}
