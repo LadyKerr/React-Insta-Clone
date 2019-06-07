@@ -17,13 +17,8 @@ class PostPage extends React.Component {
   }
   
   onChange = event => {
-    const postData = this.state.postData.filter(post => {
-     if(post.username.includes(event.target.value)) {
-       return post;
-      }
-    })
-    this.setState({searchFilter: postData})
-  }
+    const postData = this.state.postData.filter(post => post.username.includes(event.target.value))
+    this.setState({searchFilter: postData})}
 
   render () {
     return (
@@ -41,7 +36,6 @@ class PostPage extends React.Component {
       </div>
     );
   }
-  
 }
 
 export default PostPage;

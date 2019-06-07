@@ -1,6 +1,6 @@
 import React from "react";
 import instalogo from "./instalogo.png";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import "./SearchBar.css";
 
 const SearchBarHeader = styled.header `
